@@ -13,7 +13,26 @@ describe("bouncyDancer", function() {
     expect(bouncyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
+  it('should have properties x, y, dx, and dy', function () {
+    expect(bouncyDancer).to.have.property('x');
+    expect(bouncyDancer).to.have.property('y');
+    expect(bouncyDancer).to.have.property('dx');
+    expect(bouncyDancer).to.have.property('dy');
+  });
 
+  it('should have a `move` method', function () {
+    expect(bouncyDancer.move).to.be.a('function');
+  });
+
+  it('`move` should change x and y', function () {
+    var x1 = bouncyDancer.x;
+    var y1 = bouncyDancer.y;
+    bouncyDancer.move();
+    var x2 = bouncyDancer.x;
+    var y2 = bouncyDancer.y;
+    expect(x1).to.not.equal(x2);
+    expect(y1).to.not.equal(y2);
+  });
 
   describe("dance", function(){
     it("should call step at least once per second", function(){
