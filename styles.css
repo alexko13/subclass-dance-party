@@ -49,3 +49,8 @@ body, a:link, a:visited, a:active {
   border-radius: 0px;
   border: 10px solid blue;
 }
+
+.linedUp {
+  position: relative;
+  float: left;
+}

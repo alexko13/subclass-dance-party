@@ -32,6 +32,21 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
   });
 
+  $(".lineUpButton").on("click", function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.x = 0;
+      dancer.y = 0;
+      if(dancer.dx && dancer.dy) {
+        dancer.dx = 0;
+        dancer.dy = 0;
+      }
+
+      dancer.isDancing = false;
+      dancer.setPosition(0,0);
+      dancer.$node.addClass('linedUp');
+    });
+  });
+
   setInterval(function() {
     $('body').toggleClass('lightsOn');
   }, 500);
