@@ -32,4 +32,8 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
   });
 
+  setInterval(function() {
+    $('body').toggleClass('lightsOn');
+  }, 500);
+
 });
