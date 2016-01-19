@@ -32,6 +32,17 @@ describe("shakyDancer", function() {
     expect(y1).to.not.equal(y2);
   });
 
+  it('should stay in same area', function () {
+    var x1 = shakyDancer.x;
+    var y1 = shakyDancer.y;
+    shakyDancer.shake();
+    shakyDancer.shake();
+    var x3 = shakyDancer.x;
+    var y3 = shakyDancer.y;
+    expect(x1).to.equal(x3);
+    expect(y1).to.equal(y3);
+  });
+
   describe("dance", function(){
     it("should call step at least once per second", function(){
       sinon.spy(shakyDancer, "step");
