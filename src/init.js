@@ -34,16 +34,18 @@ $(document).ready(function(){
 
   $(".lineUpButton").on("click", function(event) {
     window.dancers.forEach(function(dancer) {
-      dancer.x = 0;
-      dancer.y = 0;
-      if(dancer.dx && dancer.dy) {
-        dancer.dx = 0;
-        dancer.dy = 0;
-      }
-
       dancer.isDancing = false;
       dancer.setPosition(0,0);
       dancer.$node.addClass('linedUp');
+    });
+  });
+
+  $(".danceButton").on("click", function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.$node.removeClass('linedUp');
+      dancer.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());   
+      dancer.isDancing = true;
+      dancer.step();
     });
   });
 
