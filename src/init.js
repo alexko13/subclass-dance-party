@@ -25,7 +25,7 @@ $(document).ready(function(){
     var dancer = new dancerConstructor(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 100
     );
 
     window.dancers.push(dancer);
