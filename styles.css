@@ -13,8 +13,11 @@ body, a:link, a:visited, a:active {
 }
 
 .lightsOn {
-  background-color: #CCC;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  background-color: #5F5F5F;
 }
+
 
 .title, .actionButton {
   padding: 5px 12px;
@@ -43,5 +46,6 @@ body, a:link, a:visited, a:active {
 }
 
 .shaky {
+  border-radius: 0px;
   border: 10px solid blue;
 }
