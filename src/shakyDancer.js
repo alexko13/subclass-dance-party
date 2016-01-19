@@ -13,7 +13,9 @@ ShakyDancer.prototype.step = function(){
 };
 
 ShakyDancer.prototype.shake = function() {
-  this.x = (this.x % 2 === 0) ? (this.x + 5) : (this.x - 5);
-  this.y = (this.y % 2 !== 0) ? (this.y + 5) : (this.y - 5);
-  this.setPosition(this.y, this.x);
+  if(this.isDancing) {
+    this.x = (this.x % 2 === 0) ? (this.x + 5) : (this.x - 5);
+    this.y = (this.y % 2 !== 0) ? (this.y + 5) : (this.y - 5);
+    this.setPosition(this.y, this.x);
+  }
 };

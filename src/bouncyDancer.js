@@ -14,16 +14,18 @@ BouncyDancer.prototype.step = function(){
 };
 
 BouncyDancer.prototype.move = function() {
-  if(this.dx && this.dy){
-    if(this.x < 0 || this.x > $('body').width()) {
-      this.dx = -this.dx; 
-    }
-    if(this.y < 0 || this.y > $('body').height()) {
-      this.dy = -this.dy;
-    }
+  if(this.isDancing) {
+    if(this.dx && this.dy){
+      if(this.x < 0 || this.x > $('body').width()) {
+        this.dx = -this.dx; 
+      }
+      if(this.y < 0 || this.y > $('body').height()) {
+        this.dy = -this.dy;
+      }
 
-    this.x += this.dx;
-    this.y += this.dy;
-    this.setPosition(this.y, this.x);
-  }
+      this.x += this.dx;
+      this.y += this.dy;
+      this.setPosition(this.y, this.x);
+    }
+  }  
 };
