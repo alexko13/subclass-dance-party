@@ -43,7 +43,7 @@ $(document).ready(function(){
   $(".danceButton").on("click", function(event) {
     window.dancers.forEach(function(dancer) {
       dancer.$node.removeClass('linedUp');
-      dancer.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());   
+      dancer.setPosition(dancer.y, dancer.x);   
       dancer.isDancing = true;
     });
   });
