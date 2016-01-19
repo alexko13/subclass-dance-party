@@ -1,8 +1,6 @@
 var BouncyDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('bouncy');
-  this.y = top;
-  this.x = left;
   this.dx = Math.floor((Math.random() * 5)) + 1;
   this.dy = Math.floor((Math.random() * 5)) + 1;
 };

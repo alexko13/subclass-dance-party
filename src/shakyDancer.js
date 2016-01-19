@@ -1,8 +1,6 @@
 var ShakyDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('shaky');
-  this.y = Math.floor(top);
-  this.x = Math.floor(left);
 };
 
 ShakyDancer.prototype = Object.create(Dancer.prototype);
