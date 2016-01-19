@@ -37,3 +37,7 @@ body, a:link, a:visited, a:active {
 .bouncy {
   border: 10px solid yellow;
 }
+
+.shaky {
+  border: 10px solid blue;
+}
