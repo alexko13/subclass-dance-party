@@ -45,7 +45,6 @@ $(document).ready(function(){
       dancer.$node.removeClass('linedUp');
       dancer.setPosition($("body").height() * Math.random(), $("body").width() * Math.random());   
       dancer.isDancing = true;
-      dancer.step();
     });
   });
 
