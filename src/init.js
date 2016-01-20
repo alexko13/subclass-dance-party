@@ -1,5 +1,6 @@
 $(document).ready(function(){
   window.dancers = [];
+  window.iconClassNames = ["fa fa-cogs", "fa fa-code", "fa fa-code-fork", "fa fa-database", "fa fa-usb"];
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer

@@ -18,7 +18,6 @@ body, a:link, a:visited, a:active {
   background-color: #5F5F5F;
 }
 
-
 .title, .actionButton {
   padding: 5px 12px;
   float: right;
@@ -33,21 +32,19 @@ body, a:link, a:visited, a:active {
   background-color: #777;
 }
 .dancer {
-  border-radius: 10px;
   position: absolute;
 }
 
 .blinky {
-  border: 10px solid red;
+  color: red;
 }
 
 .bouncy {
-  border: 10px solid yellow;
+  color: yellow;
 }
 
 .shaky {
-  border-radius: 0px;
-  border: 10px solid blue;
+  color: blue;
 }
 
 .linedUp {
