@@ -33,6 +33,13 @@ body, a:link, a:visited, a:active {
 }
 .dancer {
   position: absolute;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+.dancer:hover {
+  -webkit-transform: rotate(1080deg) scale(5, 5);
+  transform: rotate(1080deg) scale(5, 5);
 }
 
 .blinky {
@@ -40,7 +47,7 @@ body, a:link, a:visited, a:active {
 }
 
 .bouncy {
-  color: yellow;
+  color: green;
 }
 
 .shaky {
